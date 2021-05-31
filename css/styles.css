@@ -5,6 +5,7 @@
 html,
 body {
   position: relative;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 body {
@@ -50,10 +51,32 @@ footer {
 .tile {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  /* height: 100%; */
+  /* top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; */
+  transition: all .1s ease-in;
+}
+.tile:hover {
+  transform: translate(0, -15px);
+}
+.tile:active {
+  transform: scale(1.025);
+}
+
+.tile:hover img {
+  filter: brightness(40%) blur(1px);
 }
 .tile img {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  position: relative;
+  height: 100%
 }
 .tile img:hover {
   /* TODO: MODULE_CARDS */
@@ -64,9 +87,22 @@ footer {
 /* Think about how those in relation to the existing "tile" classes. */
 .tile-text {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   z-index: 1;
   text-transform: uppercase;
   letter-spacing: 2px;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.tile-title {
+  font-size: 1rem;
+}
+.tile-subtitle {
+  font-size: 0.625rem;
 }
 
 .hero-image {
@@ -77,6 +113,11 @@ footer {
   /* TODO: MODULE_LAYOUT */
   /* 1. Set a specific height. */
   /* 2. Position and center the image to scale nicely on all screens. */
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .hero-subheading {
