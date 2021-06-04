@@ -78,6 +78,7 @@ footer {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   /* transition: opacity 0.15s ease; */
 }
+
 .tile:hover {
   transform: scale(1.05, 1.05);
 }
@@ -124,6 +125,13 @@ footer {
   align-self: flex-end;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.tile-text > a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
 }
 
 .tile-title {
@@ -213,13 +221,7 @@ footer {
   filter: brightness(70%);
 }
 
-/* ================================== */
-/* Adventure details page CSS */
-/* ================================== */
-
-.adventure-detail-card {
-  /* TODO: MODULE_ADVENTURE_DETAILS */
-  /* 1. Fill in the required properties. */
+.adventure-card-text {
   position: relative;
   bottom: 0;
   left: 0;
@@ -234,16 +236,55 @@ footer {
 }
 
 .adventure-card-title {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-    align-self: center;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  align-self: center;
 }
+
+/* ================================== */
+/* Adventure details page CSS */
+/* ================================== */
+
+.adventure-detail-card {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  position: relative;
+  text-align: center;
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  border: 1px solid lightgrey;
+  /* max-height: 40vh; */
+}
+
+.image-row {
+  max-height: 40vh;
+}
+
 .adventure-card-image {
   /* TODO: MODULE_ADVENTURE_DETAILS */
   /* 1. Fill in the required properties. */
+  box-sizing: border-box;
+  object-fit: cover;
+  width: 100%;
 }
+
+.primary-image {
+  height: 100%;
+}
+
 .adventure-card-image:hover {
   /* TODO: MODULE_ADVENTURE_DETAILS */
   /* 1. Fill in the required properties. */
+}
+.adventure-detail-card-header {
+  display: block;
 }
 .experience-content ul li {
   margin-left: 16px;
