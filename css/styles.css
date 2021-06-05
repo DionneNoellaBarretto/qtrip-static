@@ -65,6 +65,7 @@ footer {
   right: 0;
   transition: all .2s ease;
 }
+
 .tile::after {
   content: "";
   position: absolute;
@@ -76,7 +77,6 @@ footer {
   background-color: rgba(0,0,0,0.4);
   opacity: 1;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  /* transition: opacity 0.15s ease; */
 }
 
 .tile:hover {
@@ -91,10 +91,6 @@ footer {
   transform: scale(1.025);
 }
 
-/* .tile:hover img {
-  filter: brightness(60%);
-} */
-
 .tile img {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
@@ -103,7 +99,6 @@ footer {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  /* flex-grow: 1; */
 }
 .tile img:hover {
   /* TODO: MODULE_CARDS */
@@ -181,11 +176,11 @@ footer {
   /* 1. Fill in the required properties. */
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-content: center;
   align-items: center;
   position: relative;
-  text-align: center;
+  text-align: start;
   flex-grow: 1;
   top: 0;
   left: 0;
@@ -199,6 +194,7 @@ footer {
 .adventure-card:hover {
   transform: translate(0, -15px);
 }
+
 .adventure-card a {
   position: relative;
   height: 80%;
@@ -215,6 +211,7 @@ footer {
   width: 100%;
   object-fit: cover;
 }
+
 .adventure-card img:hover {
   /* TODO: MODULE_ADVENTURES_GRID */
   /* 1. Fill in the required properties. */
@@ -254,17 +251,12 @@ footer {
   position: relative;
   text-align: center;
   padding: 0.5rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100vh;
+  margin: 0.5rem;
   border: 1px solid lightgrey;
-  /* max-height: 40vh; */
+  border-radius: 0.25rem;
 }
-
-.image-row {
-  max-height: 40vh;
+.adventure-detail-card p {
+  text-align: left;
 }
 
 .adventure-card-image {
@@ -275,21 +267,31 @@ footer {
   width: 100%;
 }
 
-.primary-image {
-  height: 100%;
-}
-
 .adventure-card-image:hover {
   /* TODO: MODULE_ADVENTURE_DETAILS */
   /* 1. Fill in the required properties. */
 }
 .adventure-detail-card-header {
   display: block;
+  text-align: start;
+  padding-left: 0.5rem;
+}
+.experience-content {
+  text-align: start;
+  padding: 0.5rem;
 }
 .experience-content ul li {
   margin-left: 16px;
   padding: 0;
 }
+
+#reservation {
+  box-sizing: border-box;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+
 
 @media only screen and (min-width: 768px) {
   /* For desktops phones: */
