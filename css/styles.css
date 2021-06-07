@@ -130,10 +130,11 @@ footer {
 }
 
 .tile-title {
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 2.5vmax, 30px);
 }
 .tile-subtitle {
-  font-size: clamp(0.625rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.625rem, 2vw, 20px);
+  font-weight: 400;
 }
 
 .hero-image {
@@ -186,7 +187,7 @@ footer {
   left: 0;
   width: 100%;
   height: 40vh;
-  max-height: 300px;
+  max-height: 250px;
   border: 1px solid lightgray;
   transition: all 0.2s ease;
 }
@@ -195,6 +196,9 @@ footer {
   transform: translate(0, -15px);
 }
 
+.adventure-card:active {
+  transform: scale(0.975);
+}
 .adventure-card a {
   position: relative;
   height: 80%;
@@ -292,6 +296,30 @@ footer {
 }
 
 
+@media only screen and (max-width: 767px) {
+  .tile {
+    transition: none;
+  }
+  .tile:active {
+    transition: transform 0.2s ease-in;
+    transform:  translate(0,-15px);
+  }
+  .tile:hover::after {
+    visibility: hidden;
+  }
+
+  .adventure-card {
+    transition: none;
+  }
+  .adventure-card:active {
+    transition: transform 0.2s ease-in;
+    transform: translate(0, -15px);
+  }
+
+  .adventure-card:active {
+    
+  }
+}
 
 @media only screen and (min-width: 768px) {
   /* For desktops phones: */
