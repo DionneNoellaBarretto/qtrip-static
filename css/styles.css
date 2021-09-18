@@ -87,13 +87,6 @@ footer {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.tile:hover {
-  transform: scale(1.05, 1.05);
-}
-
-.tile:hover::after {
-  visibility: visible;
-}
 
 .tile:active {
   transform: scale(1.025);
@@ -105,12 +98,8 @@ footer {
   position: relative;
   z-index: -2;
   object-fit: cover;
-  height: 100%;
+  height: auto;
   width: 100%;
-}
-.tile img:hover {
-  /* TODO: MODULE_CARDS */
-  /* 1. Fill in the required properties. */
 }
 
 /* Hint: Notice the position:absolute and z-index properties. */
@@ -211,9 +200,7 @@ footer {
   transition: all 0.2s ease;
 }
 
-.adventure-card:hover {
-  transform: translate(0, -15px);
-}
+
 
 .adventure-card:active {
   transform: scale(0.975);
@@ -235,11 +222,7 @@ footer {
   object-fit: cover;
 }
 
-.adventure-card img:hover {
-  /* TODO: MODULE_ADVENTURES_GRID */
-  /* 1. Fill in the required properties. */
-  filter: brightness(70%);
-}
+
 
 .adventure-card-text {
   position: relative;
@@ -291,10 +274,6 @@ footer {
   width: 100%;
 }
 
-.adventure-card-image:hover {
-  /* TODO: MODULE_ADVENTURE_DETAILS */
-  /* 1. Fill in the required properties. */
-}
 .adventure-detail-card-header {
   display: block;
   text-align: start;
@@ -324,9 +303,6 @@ footer {
     transition: transform 0.2s ease-in;
     transform:  translate(0,-15px);
   }
-  .tile:hover::after {
-    visibility: hidden;
-  }
 
   .adventure-card {
     transition: none;
@@ -341,11 +317,29 @@ footer {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   /* For desktops phones: */
   #reservation {
     width: 400px;
     position: fixed;
+  }
+
+  .tile:hover {
+    transform: scale(1.05, 1.05);
+  }
+  
+  .tile:hover::after {
+    visibility: visible;
+  }
+
+  .adventure-card:hover {
+    transform: translate(0, -15px);
+  }
+
+  .adventure-card img:hover {
+    /* TODO: MODULE_ADVENTURES_GRID */
+    /* 1. Fill in the required properties. */
+    filter: brightness(70%);
   }
 }
 
